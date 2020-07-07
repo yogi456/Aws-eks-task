@@ -1,0 +1,10 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+        name: farget-lw
+        region: ap-southeast-1
+fargateProfiles:
+        - name: farget-default
+          selectors:
+                  - namespace: kube-system
+                  - namespace: default
